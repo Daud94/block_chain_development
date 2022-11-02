@@ -31,7 +31,8 @@ const dataObject = {
 
 function generateHash(obj) {
     // Write your code here
-    return sha256(obj);
+    const data = JSON.stringify(obj);
+    return sha256(data);
 }
 
 console.log(`SHA256 Hash: ${generateHash(data1)}`);
